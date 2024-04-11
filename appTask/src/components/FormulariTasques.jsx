@@ -7,7 +7,7 @@ function FormulariTasques(props) {
     const canviTextTasca = e => {
         setTextTasca(e.target.value);
         console.log('value is:', e.target.value);
-        };
+    };
 
     const enviarForm = e => {
         e.preventDefault();
@@ -15,12 +15,13 @@ function FormulariTasques(props) {
         titol: textTasca,
         completada: false
         }
-        props.funcAfegirTasca(tascaNova);
-        }
-        
+        //Comprovació per evitar afegir amb empties
+        if (tascaNova.titol != "") props.funcAfegirTasca(tascaNova);
+    }
+    //Render del formulari
     return(
         <>
-            <label htmlFor="">Afegeix tasca</label>
+            <label>Afegeix tasca</label>
             <input type="text" onChange={canviTextTasca}/>
             <button  onClick={enviarForm}>Enviar</button>
         </>
