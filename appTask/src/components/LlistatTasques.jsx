@@ -12,21 +12,26 @@ function LlistaTasques() {
     //Funció que filtra les tasques segons el seu index i que retorna qualsevol element diferent
     //a la id que rep per paràmetre per després actualitzar el seu estat
     const eliminarTasca = id => {
-        const tasquesActuals = tasques.filter((never, index) =>  index !== id)
+        const tasquesActuals = tasques.filter(tasca => tasca.id !== id)
         setTasques(tasquesActuals);
     }
     //Funció que actualitza la propietat completada de la tasca i després l'estat de totes
     const completarTasca = id => {
-        tasques[id].completada = tasques[id].completada == true ? false : true;
-        setTasques(tasques);
+        let tasquesActuals = tasques.map(tasca => {
+            if (tasca.id == id) {
+                tasca.completada == false ? tasca.completada = true : tasca.completada = false;
+            }
+            return tasca;
+        })
+        setTasques(tasquesActuals);
     }
     //Render del llistat de tasques amb el formulari per afegir de noves
     return(
         <>
             <h1>Llistat de tasques</h1>
-            <FormulariTasques funcAfegirTasca={afegirTasca}/>
-            {tasques.map((tasca, index )=> (
-                <Tasca id={index} titol={tasca.titol} completada={tasca.completada} completarTasca={completarTasca} eliminarTasca={eliminarTasca}/>
+            <FormulariTasques funcAfegirTasca={afegirTasca} idTasca={tasques.length == 0 ? 0 : (tasques[tasques.length-1]).id+1}/>
+            {tasques.map(tasca => (
+                <Tasca id={tasca.id} titol={tasca.titol} completada={tasca.completada} completarTasca={completarTasca} eliminarTasca={eliminarTasca}/>
             ))}
         </>
     )

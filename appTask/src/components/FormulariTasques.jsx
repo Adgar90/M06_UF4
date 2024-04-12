@@ -12,11 +12,14 @@ function FormulariTasques(props) {
     const enviarForm = e => {
         e.preventDefault();
         const tascaNova= {
+        id: props.idTasca,
         titol: textTasca,
         completada: false
         }
         //Comprovació per evitar afegir amb empties
-        if (tascaNova.titol != "") props.funcAfegirTasca(tascaNova);
+        if (tascaNova.titol != "") { 
+            props.funcAfegirTasca(tascaNova);
+        }
     }
     //Render del formulari
     return(
