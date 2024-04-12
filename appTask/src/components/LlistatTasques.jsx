@@ -15,7 +15,8 @@ function LlistaTasques() {
         const tasquesActuals = tasques.filter(tasca => tasca.id !== id)
         setTasques(tasquesActuals);
     }
-    //Funció que actualitza la propietat completada de la tasca i després l'estat de totes
+    //Funció que mapeja l'array const i que actualitza l'estat de completada en la tasca
+    //que la seva id sigui igual a la id que rep per paràmetre
     const completarTasca = id => {
         let tasquesActuals = tasques.map(tasca => {
             if (tasca.id == id) {

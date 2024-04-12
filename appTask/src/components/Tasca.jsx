@@ -1,5 +1,4 @@
 import { BiSolidTrashAlt } from "react-icons/bi";
-import { useState } from 'react';
 
 
 function Tasca(props) {
@@ -11,8 +10,6 @@ function Tasca(props) {
     //Constant que crida la funció completarTasca la qual rep per props
     const completar = e => {
         props.completarTasca(props.id);
-        //Ternaria per comprovar el className del target i actualitzar el seu estat segons el valor que rep
-
     }
     //Render de la tasca
     return (
