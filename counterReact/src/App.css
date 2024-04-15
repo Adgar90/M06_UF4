@@ -18,10 +18,11 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 .btnClick {
-  background-color: green;
+  background-color: rgb(120, 180, 120);
+  margin: 10px;
 }
 .btnReiniciar {
-  background-color: red;
+  background-color: rgb(177, 123, 123);
 }
 .comptador {
   border-radius: 8px;
