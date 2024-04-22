@@ -18,17 +18,20 @@ majorMenorIgual(-3)
     .catch(error => console.log(error));
 //igual a 0 (resolve)
 majorMenorIgual(0)
-.then(result => console.log(result))
-.catch(error => console.log(error));
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
 //entre 0 i 10 (resolve)
 majorMenorIgual(5)
-.then(result => console.log(result))
-.catch(error => console.log(error));
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
 //igual a 10 (resolve)
 majorMenorIgual(10)
-.then(result => console.log(result))
-.catch(error => console.log(error));
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
 //major a 10 (reject)
 majorMenorIgual(13)
-.then(result => console.log(result))
-.catch(error => console.log(error));
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
+//asignant promise a variable
+let resultat1 = majorMenorIgual(8);
+console.log(resultat1);

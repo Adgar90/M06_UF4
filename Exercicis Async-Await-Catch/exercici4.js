@@ -23,3 +23,6 @@ divideix(0,0)
 divideix(10,0)
     .then(result => console.log(result))
     .catch(error => console.log(error));
+//asignant promise a variable
+let resultat = divideix(0, 2);
+console.log(resultat);
