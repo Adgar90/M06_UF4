@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400|Open+Sans:700);
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+body {
+  color: #973939;
+}
+
+section.text {
+  width: 100%;
+  min-width: 800px;
+  text-align: center;
+  top: 50%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+#main-title, #subtitle {
+  transform: matrix(1, -0.20, 0, 1, 0, 0);
+  -ms-transform: matrix(1, -0.20, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, -0.20, 0, 1, 0, 0);
+}
+
+#main-title {
+  font-family: "Open Sans", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 70px;
+  text-shadow: 4px 5px #000000, 6px 7px #746f6e;
+}
+
+#main-title span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+span.star {
+  font-size: 20px;
+}
+
+#subtitle {
+  font-family: "Open Sans", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;  
+  position: relative;
+}
+
+#subtitle:before, #subtitle:after {
+  content: " ";
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  border-top: 2px solid #121212;
+  border-bottom: 2px solid #121212;
+}
+
+#subtitle:before {
+  margin: 5px 0 0 -110px;
+}
+
+#subtitle:after {
+  margin: 5px 0 0 10px;
+}
